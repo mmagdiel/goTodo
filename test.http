@@ -1,1 +1,36 @@
-http://localhost:3000/
+@resource = /api/todos/
+@host = http://localhost:3000
+@contentType = application/json
+
+
+GET {{host}}
+
+###
+
+GET {{host}}{{resource}}
+
+###
+
+GET {{host}}{{resource}}1
+
+###
+
+POST {{host}}{{resource}} HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "title": "loremsadfas asdfas asdf asdf  asdf"
+}
+
+###
+
+PUT {{host}}{{resource}}1
+content-type: {{contentType}}
+
+{
+    "title": "asdf asdf asdfaghgfhjndfg asfgddhsadfg"
+}
+
+###
+
+DELETE {{host}}{{resource}}1
